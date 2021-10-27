@@ -1,0 +1,50 @@
+body {
+    width: 100vw;
+    min-height: 11000px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    background-color: cadetblue;
+    width: 100vw;
+    min-height: 11000px;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: -500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.wave {
+    background-color: rgb(95, 121, 160);
+    height: 10vh;
+    margin: 5vh 0;
+}
+
+#boat {
+    width: 100px;
+    height: 200px;
+    background-color: brown;
+    background-image: url("../Media/Bote.gif ");
+    position: fixed;
+    top: 0;
+    left: calc(50% - 50px);
+    animation-name: swing;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+}
+
+@keyframes swing {
+    from {
+        left: calc(50% - 50px - 10px);
+    }
+    to {
+        left: calc(50% - 50px + 10px);
+    }
+}
