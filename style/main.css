@@ -5,6 +5,7 @@ body {
     justify-content: center;
     padding: 0;
     margin: 0;
+    color: white
 }
 
 main {
@@ -14,7 +15,7 @@ main {
     padding: 0;
     margin: 0;
     position: fixed;
-    top: -500px;
+    top: 0px;
     display: flex;
     flex-direction: column;
 }
@@ -32,7 +33,7 @@ main {
     background-size: 200px 400px;
     position: fixed;
     top: 0;
-    left: calc(50% - 50px);
+    left: calc(50% - 100px);
     animation-name: swing;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -42,9 +43,9 @@ main {
 
 @keyframes swing {
     from {
-        left: calc(50% - 50px - 10px);
+        left: calc(50% - 100px - 10px);
     }
     to {
-        left: calc(50% - 50px + 10px);
+        left: calc(50% - 100px + 10px);
     }
 }
