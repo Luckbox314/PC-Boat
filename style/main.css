@@ -26,13 +26,13 @@ main {
 }
 
 #boat {
-    width: 200px;
-    height: 400px;
+    width: 400px;
+    height: 800px;
     background-image: url("../Media/Bote.gif ");
-    background-size: 200px 400px;
+    background-size: 400px 800px;
     position: fixed;
     top: 0;
-    left: calc(50% - 50px);
+    left: calc(50% - 200px);
     animation-name: swing;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -42,9 +42,9 @@ main {
 
 @keyframes swing {
     from {
-        left: calc(50% - 50px - 10px);
+        left: calc(50% - 200px - 15px);
     }
     to {
-        left: calc(50% - 50px + 10px);
+        left: calc(50% - 200px + 15px);
     }
 }
