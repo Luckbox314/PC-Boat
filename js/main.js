@@ -1,13 +1,17 @@
-var scroll = 0;
-var inHarbor = true;
-var inFinalHarbor = false;
+let scroll = 0;
+let inHarbor = true;
+let inFinalHarbor = false;
 
-var height;
-var width;
+let height;
+let width;
 
-var setup = true;
+let setup = true;
+let main;
+let boatHeight;
 
 $(document).ready(function(){
+
+    main = $("main");
     $('html, body').scrollTop(0);
     
     $(window).on('load', function() {
@@ -20,29 +24,23 @@ $(document).ready(function(){
     width = $(window).width();
     boatHeight = $("#boat").height();
 
-    $("body").css("height", $("main").height() + height/2 + boatHeight/2);
+    $("body").css("height", main.height() + height/2 + boatHeight/2);
 
-    console.log($("main").height());
+    console.log(main.height());
 
 
 
     console.log(height);
     console.log(boatHeight);
-    console.log($("main").height() - (height/2 + boatHeight/2));
+    console.log(main.height() - (height/2 + boatHeight/2));
     console.log(height/2 - boatHeight/2)
 
-    // var posChecker = window.setInterval(harbor, 1000);
     $(window).scroll(harbor)
     
 
 
     
 });
-
-
-function checkPos() {
-    scroll = $(window).scrollTop();
-}
 
 function harbor() {
 
@@ -53,23 +51,24 @@ function harbor() {
     }
     
     $("#odometer").text(scroll);
+
     if (scroll > height/2 - boatHeight/2 && scroll < 11000 - height/2 - boatHeight/2) { // not in harbor
         if (inHarbor || inFinalHarbor) { // if get out of harbor
             inHarbor = false;
             inFinalHarbor = false;
-            $("main").css("position", "static");
-            $("main").css("margin-top", `${height/2 - boatHeight/2}px`); 
+            main.css("position", "static");
+            main.css("margin-top", `${height/2 - boatHeight/2}px`);
             $("#section").text('Open Ocean');
         }
     }
 
-    else if (scroll >= 11000 - height/2 - boatHeight/2) {
+    else if (scroll >= 11000 - height/2 - boatHeight/2) { // in final harbor
         if (!inFinalHarbor) {
             inFinalHarbor = true;
-            
-            $("main").css("position", "fixed");
+
+            main.css("position", "fixed");
             $("#section").text('Final Harbor');
-            $("main").css("top", `${-(height/2 - boatHeight/2) - $("main").height() + height}px` );
+            main.css("top", `${-(height/2 - boatHeight/2) - main.height() + height}px` );
             
         }
         $("#boat").css("top", `${scroll - 11000 + height}px`);
@@ -79,9 +78,9 @@ function harbor() {
     else { // in harbor
         if (!inHarbor) { // if get in harbor
             inHarbor = true;
-            $("main").css("margin-top", `0px`);
-            $("main").css("position", "fixed");
-            $("main").css("top", `0px`);
+            main.css("margin-top", `0px`);
+            main.css("position", "fixed");
+            main.css("top", `0px`);
             $("#section").text('Harbor');
         }
         $("#boat").css("top", `${scroll}px`);
