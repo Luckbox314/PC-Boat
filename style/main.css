@@ -20,16 +20,16 @@ main {
 }
 
 .wave {
-    background-color: rgb(95, 121, 160);
-    height: 10vh;
-    margin: 5vh 0;
+    width: 1920px;
+    height: 11000px;
+    background-image: url("../Media/Mega_Photo.jpg");
 }
 
 #boat {
-    width: 100px;
-    height: 200px;
-    background-color: brown;
+    width: 200px;
+    height: 400px;
     background-image: url("../Media/Bote.gif ");
+    background-size: 200px 400px;
     position: fixed;
     top: 0;
     left: calc(50% - 50px);
