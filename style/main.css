@@ -7,7 +7,7 @@ html {
 
 body {
     width: 100vw;
-    min-height: 11000px;
+    min-height: 6000px;
     display: flex;
     justify-content: center;
     padding: 0;
@@ -15,32 +15,31 @@ body {
     color: white;
     background-color: #00252E;
     overflow-x: hidden;
-
 }
 
 main {
-    background-color: #00252E;
+    background-color: cadetblue;
     width: 100vw;
-    min-height: 11000px;
+    min-height: 6000px;
     padding: 0;
     margin: 0;
     position: fixed;
-    top: 0;
+    top: -500px;
     display: flex;
     flex-direction: column;
 }
 
 .wave {
     width: 100vw;
-    height: 11000px;
+    height: 6000px;
     background-image: url("../Media/Mega_Photo.jpg");
 }
 
 #boat {
-    width: 200px;
-    height: 600px;
+    width: 350px;
+    height: 700px;
     background-image: url("../Media/Bote.gif ");
-    background-size: 400px 800px;
+    background-size: 350px 700px;
     background-position: -100px -100px;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -52,6 +51,9 @@ main {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+}
+
+
 }
 
 @keyframes swing {

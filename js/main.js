@@ -44,7 +44,7 @@ function harbor() {
     
     $("#odometer").text(scroll);
 
-    if (scroll > height/2 - boatHeight/2 && scroll < 11000 - height/2 - boatHeight/2) { // not in harbor
+    if (scroll > height/2 - boatHeight/2 && scroll < 6000 - height/2 - boatHeight/2) { // not in harbor
         if (inHarbor || inFinalHarbor) { // if get out of harbor
             inHarbor = false;
             inFinalHarbor = false;
@@ -54,7 +54,7 @@ function harbor() {
         }
     }
 
-    else if (scroll >= 11000 - height/2 - boatHeight/2) { // in final harbor
+    else if (scroll >= 6000 - height/2 - boatHeight/2) { // in final harbor
         if (!inFinalHarbor) {
             inFinalHarbor = true;
 
@@ -63,7 +63,7 @@ function harbor() {
             main.css("top", `${-(height/2 - boatHeight/2) - main.height() + height}px` );
             
         }
-        $("#boat").css("top", `${scroll - 11000 + height}px`);
+        $("#boat").css("top", `${scroll - 5800 + height}px`);
          
     }
 
