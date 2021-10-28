@@ -1,3 +1,10 @@
+html {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+
 body {
     width: 100vw;
     min-height: 6000px;
@@ -5,6 +12,9 @@ body {
     justify-content: center;
     padding: 0;
     margin: 0;
+    color: white;
+    background-color: #00252E;
+    overflow-x: hidden;
 }
 
 main {
@@ -20,7 +30,7 @@ main {
 }
 
 .wave {
-    width: 1920px;
+    width: 100vw;
     height: 6000px;
     background-image: url("../Media/Mega_Photo.jpg");
 }
@@ -30,9 +40,12 @@ main {
     height: 700px;
     background-image: url("../Media/Bote.gif ");
     background-size: 350px 700px;
+    background-position: -100px -100px;
+    background-repeat: no-repeat;
+    overflow: hidden;
     position: fixed;
     top: 0;
-    left: calc(50% - 200px);
+    left: calc(50% - 100px);
     animation-name: swing;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -45,9 +58,9 @@ main {
 
 @keyframes swing {
     from {
-        left: calc(50% - 200px - 15px);
+        left: calc(50% - 100px - 15px);
     }
     to {
-        left: calc(50% - 200px + 15px);
+        left: calc(50% - 100px + 15px);
     }
 }
