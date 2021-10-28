@@ -1,6 +1,6 @@
 body {
     width: 100vw;
-    min-height: 11000px;
+    min-height: 6000px;
     display: flex;
     justify-content: center;
     padding: 0;
@@ -10,7 +10,7 @@ body {
 main {
     background-color: cadetblue;
     width: 100vw;
-    min-height: 11000px;
+    min-height: 6000px;
     padding: 0;
     margin: 0;
     position: fixed;
@@ -21,7 +21,7 @@ main {
 
 .wave {
     width: 1920px;
-    height: 11000px;
+    height: 6000px;
     background-image: url("../Media/Mega_Photo.jpg");
 }
 
