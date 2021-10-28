@@ -20,31 +20,23 @@ $(document).ready(function(){
         }, 0);
     });    
     $(window).scrollTop = 0;
+
     height = $(window).height();
     width = $(window).width();
     boatHeight = $("#boat").height();
 
-    $("body").css("height", main.height() + height/2 + boatHeight/2);
+    $("body").css("height", main.height() + (height - boatHeight));
 
-    console.log(main.height());
-
-
-
-    console.log(height);
-    console.log(boatHeight);
-    console.log(main.height() - (height/2 + boatHeight/2));
-    console.log(height/2 - boatHeight/2)
-
-    $(window).scroll(harbor)
+    $(window).scroll(harbor);
     
-
+    window.addEventListener('resize', updateSize);
 
     
 });
 
 function harbor() {
 
-    if (setup) {
+    if (setup) { //Skips
         setup = !setup;
     } else {
         scroll = $(window).scrollTop(); 
@@ -86,4 +78,10 @@ function harbor() {
         $("#boat").css("top", `${scroll}px`);
           
     }
+}
+
+function updateSize() {
+    height = $(window).height();
+    width = $(window).width();
+    $("body").css("height", main.height() + (height - boatHeight));
 }
