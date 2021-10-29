@@ -34,16 +34,19 @@ main {
 .harbor {
     height: 1920px;
     width: 100%;
-    background-position: center;
+    background-position-x: center;
+    background-repeat: no-repeat;
 }
 
 #harbor-1 {
     background-image: url("../Media/muelle1.png");
+    background-position-y: -390px;
     
 }
 
 #harbor-2 {
     background-image: url("../Media/muelle.png");
+    background-position-y: 420px;
 }
 
 #preload {
