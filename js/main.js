@@ -63,7 +63,7 @@ function harbor() {
             main.css("top", `${-(height/2 - boatHeight/2) - main.height() + height}px` );
             
         }
-        $("#boat").css("top", `${scroll - 5800 + height}px`);
+        $("#boat").css("top", `${scroll - 6000 + height}px`);
          
     }
 

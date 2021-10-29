@@ -14,32 +14,27 @@
 
 
 <body>
-
-    <main>
-
-        <div id="preload" onclick="play()">
-            <audio id="bells" src="Media/bells.wav"> </audio>
-
-        <h1>¡A  NAVEGAR!</h1>
-
-
-        </div>
-
-
-        <div id="boat">
-            <p id="odometer"></p>
-            <p id="section">Harbor</p>
-        </div>
-        <div class="wave"></div>
-
-        <audio controls preload autoplay loop>
+    <div id="preload" onclick="play()">
+        <audio id="bells" src="Media/bells.wav"> </audio>
+            <h1>¡A NAVEGAR!</h1>
+            <p>has click para comenzar</p>
+        
+    </div>
+    
+    <audio preload autoplay loop>
         <source src="Media/Bote sailing.ogg" type="audio/ogg">
         <source src="Media/Bote sailing.mp3" type="audio/mpeg">
             Your browser does not support the
             <code>audio</code> element.
     </audio>
 
-
+    <main>
+        <div class="harbor" id="harbor-1"></div>
+        <div id="boat">
+            <p id="odometer"></p>
+            <p id="section">Harbor</p>
+        </div>   
+        <div class="harbor" id="harbor-1"></div>
     </main>
 </body>
 </html>
