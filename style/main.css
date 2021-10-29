@@ -29,6 +29,20 @@ main {
     flex-direction: column;
 }
 
+#preload {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:black;
+    opacity: 0.5;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+}
+
 .wave {
     width: 100vw;
     height: 6000px;
@@ -53,7 +67,6 @@ main {
     animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
 }
 
-
 }
 
 @keyframes swing {
@@ -63,4 +76,5 @@ main {
     to {
         left: calc(50% - 100px + 15px);
     }
+
 }

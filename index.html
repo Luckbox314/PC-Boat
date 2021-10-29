@@ -8,21 +8,31 @@
     <link rel="stylesheet" href="style/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/audio.js" ></script>
 </head>
+
+
 
 <body>
 
-
     <main>
+
+        <div id="preload" onclick="play()">
+            <audio id="bells" src="Media/bells.wav"> </audio>
+
+        <h1>¡A  NAVEGAR!</h1>
+
+
+        </div>
+
+
         <div id="boat">
             <p id="odometer"></p>
             <p id="section">Harbor</p>
         </div>
         <div class="wave"></div>
 
-       
-       <audio
-        controls autoplay loop
+        <audio controls preload autoplay loop>
         <source src="Media/Bote sailing.ogg" type="audio/ogg">
         <source src="Media/Bote sailing.mp3" type="audio/mpeg">
             Your browser does not support the
