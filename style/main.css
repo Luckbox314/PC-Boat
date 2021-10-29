@@ -31,16 +31,19 @@ main {
     justify-content: space-between;
 }
 
-.harbor1 {
-background-image: url("../Media/muelle.png");
+.harbor {
     height: 1920px;
     width: 100%;
+    background-position: center;
 }
 
-.harbor2 {
-background-image: url("../Media/muelle1.png");
-    height: 1920px;
-    width: 100%;
+#harbor-1 {
+    background-image: url("../Media/muelle1.png");
+    
+}
+
+#harbor-2 {
+    background-image: url("../Media/muelle.png");
 }
 
 #preload {
