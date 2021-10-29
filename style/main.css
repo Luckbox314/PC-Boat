@@ -31,9 +31,15 @@ main {
     justify-content: space-between;
 }
 
-.harbor {
-    height: 200px;
-    background-color: black;
+.harbor1 {
+background-image: url("../Media/muelle.png");
+    height: 1920px;
+    width: 100%;
+}
+
+.harbor2 {
+background-image: url("../Media/muelle1.png");
+    height: 1920px;
     width: 100%;
 }
 
@@ -52,10 +58,10 @@ main {
 }
 
 #boat {
-    width: 350px;
-    height: 700px;
+    width: 300px;
+    height: 600px;
     background-image: url("../Media/Bote.gif ");
-    background-size: 350px 700px;
+    background-size: 300px 600px;
     background-repeat: no-repeat;
     overflow: hidden;
     position: fixed;

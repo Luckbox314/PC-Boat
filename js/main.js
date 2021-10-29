@@ -74,7 +74,7 @@ function harbor() {
             inHarbor = true;
             main.css("margin-top", `0px`);
             main.css("position", "fixed");
-            main.css("top", `0px`);
+            main.css("top", `1px`);
             $("#section").text('Harbor');
         }
         $("#boat").css("top", `${scroll}px`);
