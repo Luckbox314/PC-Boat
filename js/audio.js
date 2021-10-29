@@ -1,4 +1,4 @@
-|function play() {
+function play() {
     let audio = document.getElementById("bells");
     audio.play();
     console.log("playing auido");
