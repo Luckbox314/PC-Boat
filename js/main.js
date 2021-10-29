@@ -1,6 +1,7 @@
 let scroll = 0;
 let inHarbor = true;
 let inFinalHarbor = false;
+let imageSize = 6000;
 
 let height;
 let width;
@@ -30,6 +31,7 @@ $(document).ready(function(){
     $(window).scroll(harbor);
     
     window.addEventListener('resize', updateSize);
+    disableScroll();
 
     
 });
@@ -44,7 +46,7 @@ function harbor() {
     
     $("#odometer").text(scroll);
 
-    if (scroll > height/2 - boatHeight/2 && scroll < 6000 - height/2 - boatHeight/2) { // not in harbor
+    if (scroll > height/2 - boatHeight/2 && scroll < imageSize - height/2 - boatHeight/2) { // in open sea
         if (inHarbor || inFinalHarbor) { // if get out of harbor
             inHarbor = false;
             inFinalHarbor = false;
@@ -54,7 +56,7 @@ function harbor() {
         }
     }
 
-    else if (scroll >= 6000 - height/2 - boatHeight/2) { // in final harbor
+    else if (scroll >= imageSize - height/2 - boatHeight/2) { // in final harbor
         if (!inFinalHarbor) {
             inFinalHarbor = true;
 
@@ -63,7 +65,7 @@ function harbor() {
             main.css("top", `${-(height/2 - boatHeight/2) - main.height() + height}px` );
             
         }
-        $("#boat").css("top", `${scroll - 6000 + height}px`);
+        $("#boat").css("top", `${scroll - imageSize + height}px`);
          
     }
 
@@ -85,3 +87,4 @@ function updateSize() {
     width = $(window).width();
     $("body").css("height", main.height() + (height - boatHeight));
 }
+
