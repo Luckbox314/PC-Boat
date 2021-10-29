@@ -7,5 +7,5 @@ You have received one (1) ticket for a short boat ride. Just relax and slowly sc
 
 
 ## Known bugs
-* Weird things happens if the window is resized when the boat is outside the initial harbor.
+* Weird things happen if the window is resized when the boat is outside the initial harbor.
 * Sometimes the background sound doesn't work, usually clicking the page and then reloading fix it. Several tries may be needed.
